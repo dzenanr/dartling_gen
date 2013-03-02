@@ -1,6 +1,6 @@
 # dartling_gen 
 
-## Categories: dartling, model, code generation
+**Categories**: dartling, model, code generation
 
 ## Description
 
