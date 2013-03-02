@@ -26,7 +26,7 @@ generated in the dart directory. Note that both domain and model names must be
 one word words in lower case.
 
 If the model changes, update the json representation of the model in the
-dartlingModelJson variable of the bin/dartling_gen.dart file. Regenerate only   
+dartlingModelJson variable of the bin/dartling_gen.dart file. Regenerate only 
 the lib/gen directory, where the generated code must not be edited by a 
 programmer:
 
