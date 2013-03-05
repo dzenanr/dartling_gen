@@ -43,7 +43,7 @@ part of ${domainName}_${modelName};
 
 var ${domainName}${firstLetterToUpper(modelName)}DataJson = r'''
 
-'''; 
+''';
   """;
   addText(file, text);
 }

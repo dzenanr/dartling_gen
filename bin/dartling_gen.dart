@@ -92,7 +92,7 @@ web/out
 *~
 *.js
 *.js.deps
-*.js.map 
+*.js.map
   ''';
   addText(file, text);
 }
@@ -113,7 +113,7 @@ name: ${domainName}_${modelName}
 author: Your Name
 homepage: http://ondart.me/
 version: 0.0.1
-description: ${domainName}_${modelName} application that uses dartling for its model. 
+description: ${domainName}_${modelName} application that uses dartling for its model.
 dependencies:
   browser: any
   dartling:

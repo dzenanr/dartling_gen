@@ -89,7 +89,7 @@ genLayout(File file) {
 /*
   Title:                   Basic Layout Design Style
   Author:                  Dzenan Ridjanovic
-  Influenced By:           
+  Influenced By:
   http://www.ehow.com/how_12007718_scroll-inside-html-canvas.html
   Created:                 2006-09-03
   Updated:                 2012-05-16
@@ -101,7 +101,7 @@ genLayout(File file) {
     background: #d7e9f7;
     text-align: center;
   }
-      
+
   footer {
     font-family: arial, sans-serif;
     font-size: 12px;
@@ -111,7 +111,7 @@ genLayout(File file) {
     padding: 8px;
     border-top: 2px solid #999999;
   }
-    
+
 /* ===[ end ]=== */
   ''';
   addText(file, text);
@@ -130,20 +130,20 @@ genLayout2(File file) {
   Created:                 2006-09-03
   Updated:                 2011-12-09
 */
-  
+
 /* ===[ 2 columns layout ]=== */
-  
+
   #main {
     float: left;
     width: 60%;
     background: #fffff0;
   }
-     
+
   #side {
     float: right;
     width: 36%;
   }
-    
+
 /* ===[ end ]=== */
   ''';
   addText(file, text);
@@ -183,16 +183,16 @@ genLink(File file) {
 
   .button {
     padding: 1px;
-    background: #ffcc99; 
+    background: #ffcc99;
     border-right: 1px solid #999;
     border-bottom: 1px solid #999;
     border-style: outset;
-    border-color: #d7b9c9; 
+    border-color: #d7b9c9;
     font-weight: bold;
     text-align: center;
   }
 
-      
+
 /* ===[ end ]=== */
   ''';
   addText(file, text);
@@ -222,22 +222,22 @@ genList(File file) {
     padding-top: 1px;
     padding-bottom: 1px;
     padding-left: 18px;
-  } 
-    
+  }
+
   .link li {
     background: url(https://dl.dropbox.com/u/161496/dart/img/arrow-right.gif) no-repeat 0 50%;
     padding-top: 1px;
     padding-bottom: 1px;
     padding-left: 18px;
-  } 
-    
+  }
+
   .target li {
     background: url(https://dl.dropbox.com/u/161496/dart/img/target.gif) no-repeat 0 50%;
     padding-top: 1px;
     padding-bottom: 1px;
     padding-left: 18px;
-  } 
-    
+  }
+
 /* ===[ end ]=== */
   ''';
   addText(file, text);
@@ -252,7 +252,7 @@ genMenu(File file) {
 /*
   Title:                  Menu Design Style
   Author:                 Dzenan Ridjanovic
-  Influenced By: 
+  Influenced By:
     http://www.devinrolsen.com/pure-css-horizontal-menu/
   Created:                2011-12-22
   Updated:                2012-01-04
@@ -270,14 +270,14 @@ genMenu(File file) {
   }
 
   nav ul {
-    margin: 0px; 
+    margin: 0px;
     padding: 0px;
   }
 
   nav ul li {
-    display: inline; 
-    height: 30px; 
-    float: left; 
+    display: inline;
+    height: 30px;
+    float: left;
     list-style: none;
     margin-left: 15px;
     position: relative;
@@ -366,7 +366,7 @@ genPage(File file) {
     width: 1000px;
     margin-left: auto;
     margin-right: auto;
-    padding:10px; 
+    padding:10px;
   }
 
   section {
@@ -379,7 +379,7 @@ genPage(File file) {
     margin-left: 2px;
     margin-right: 2px;
   }
-  
+
   .drop {
     float: left;
     font-size: 150%;
@@ -389,7 +389,7 @@ genPage(File file) {
     border: 2px solid #cccccc;
     background: #fffff0;
   }
-          
+
 /* ===[ end ]=== */
   ''';
   addText(file, text);
@@ -413,37 +413,37 @@ genTable(File file) {
     border-top: 1px solid #999;
     border-left: 1px solid #999;
     border-collapse: collapse;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
   }
-  
+
   caption {
     font-family: arial, sans-serif;
     font-size: 14px;
     font-weight: bold;
     color: #003366;
     padding: 6px;
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: auto;
   }
-  
+
   th, td {
     padding: 4px;
     border-right: 1px solid #999;
     border-bottom: 1px solid #999;
-  } 
-  
+  }
+
   th {
     font-family: Verdana, sans-serif;
     font-weight: bold;
     color: #ffffff;
         background: #663117;
   }
-  
+
   td {
     background: #ffe4b5;
   }
-      
+
 /* ===[ end ]=== */
   ''';
   addText(file, text);
