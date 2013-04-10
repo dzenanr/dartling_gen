@@ -118,6 +118,8 @@ dependencies:
   browser: any
   dartling:
     git: git://github.com/dzenanr/dartling.git
+  dartling_default_app:
+    git: git://github.com/dzenanr/dartling_default_app.git
   ''';
   addText(file, text);
 }
