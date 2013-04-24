@@ -79,7 +79,7 @@ File genFile(String path) {
 }
 
 addText(File file, String text) {
-  IOSink<File> writeSink = file.openWrite();
+  IOSink writeSink = file.openWrite();
   writeSink.write(text);
   writeSink.close();
 }
