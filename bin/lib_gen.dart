@@ -67,9 +67,11 @@ ${modelJson}
 genAll(String path) {
   var libPath = '${path}/lib';
   genDir(libPath);
-  File domainModelLibrary = genFile('${libPath}/${domainName}_${modelName}.dart');
+  File domainModelLibrary =
+      genFile('${libPath}/${domainName}_${modelName}.dart');
   genDomainModelLibrary(domainModelLibrary);
-  File domainModelAppLibrary = genFile('${libPath}/${domainName}_${modelName}_app.dart');
+  File domainModelAppLibrary =
+      genFile('${libPath}/${domainName}_${modelName}_app.dart');
   genDomainModelAppLibrary(domainModelAppLibrary);
 
   var domainPath = '${libPath}/${domainName}';
@@ -80,7 +82,8 @@ genAll(String path) {
   File initData = genFile('${modelPath}/init.dart');
   genInitData(initData);
   for (Concept concept in dartlingModel.concepts) {
-    File conceptEntities = genFile('${modelPath}/${concept.codesLowerUnderscore}.dart');
+    File conceptEntities =
+        genFile('${modelPath}/${concept.codesLowerUnderscore}.dart');
     genConceptEntities(conceptEntities, concept);
   }
 
@@ -110,7 +113,8 @@ genGen(String path) {
   File entries = genFile('${genModelPath}/entries.dart');
   genDartlingEntries(entries);
   for (Concept concept in dartlingModel.concepts) {
-    File conceptEntitiesGen = genFile('${genModelPath}/${concept.codesLowerUnderscore}.dart');
+    File conceptEntitiesGen =
+        genFile('${genModelPath}/${concept.codesLowerUnderscore}.dart');
     genConceptEntitiesGen(conceptEntitiesGen, concept);
   }
 }

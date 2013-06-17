@@ -1,4 +1,3 @@
 dartling_gen
 
-- use a file to read a model in json
 - gen test data based on the concept_attribute project

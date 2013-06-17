@@ -19,7 +19,9 @@ with the bin/dartling_gen.dart Dart script:
 Example:
 
 --genall C:/Users/ridjanod/git/dart/demo_projects demo projects
+
 or
+
 --genall /home/dr/git/demo_projects demo projects
 
 By running the main function in the bin/dartling_gen.dart file,

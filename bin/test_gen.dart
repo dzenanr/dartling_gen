@@ -17,9 +17,11 @@ genTest(String path) {
 
   var modelPath = '${domainPath}/${modelName}';
   genDir(modelPath);
-  File domainModelGen = genFile('${modelPath}/${domainName}_${modelName}_gen.dart');
+  File domainModelGen =
+      genFile('${modelPath}/${domainName}_${modelName}_gen.dart');
   genDomainModelGen(domainModelGen);
-  File domainModelTest = genFile('${modelPath}/${domainName}_${modelName}_test.dart');
+  File domainModelTest =
+      genFile('${modelPath}/${domainName}_${modelName}_test.dart');
   genDomainModelTest(domainModelTest);
 }
 

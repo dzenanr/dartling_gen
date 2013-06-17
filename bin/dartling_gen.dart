@@ -77,9 +77,11 @@ genReadme(File file) {
   var text = '';
   text = '${text}# ${domainName}_${modelName} \n';
   text = '${text}\n';
-  text = '${text}**Categories**: dartling, \n';
+  text = '${text}**Categories**: dartling, class models. \n';
   text = '${text}\n';
-  text = '${text}## Description: ${domainName}_${modelName} project uses [dartling] (https://github.com/dzenanr/dartling) for the model.';
+  text = '${text}## Description: \n';
+  text = '${text}${domainName}_${modelName} project uses \n';
+  text = '${text}[dartling] (https://github.com/dzenanr/dartling) for the model.';
   addText(file, text);
 }
 
