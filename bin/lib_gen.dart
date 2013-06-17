@@ -58,7 +58,7 @@ part of ${domainName}_${modelName};
 // lib/${domainName}/${modelName}/json/model.dart
 
 var ${domainName}${firstLetterToUpper(modelName)}ModelJson = r'''
-${dartlingModelJson}
+${modelJson}
 ''';
   """;
   addText(file, text);

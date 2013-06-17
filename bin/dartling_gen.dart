@@ -8,42 +8,6 @@ part 'lib_gen.dart';
 part 'test_gen.dart';
 part 'web_gen.dart';
 
-String dartlingModelJson = r'''
-{
-   "width":990,
-   "height":580,
-   "lines":[
-
-   ],
-   "boxes":[
-      {
-         "entry":true,
-         "name":"Project",
-         "x":179,
-         "y":226,
-         "width":120,
-         "height":120,
-         "items":[
-            {
-               "sequence":10,
-               "category":"identifier",
-               "name":"name",
-               "type":"String",
-               "init":""
-            },
-            {
-               "sequence":20,
-               "category":"attribute",
-               "name":"description",
-               "type":"String",
-               "init":""
-            }
-         ]
-      }
-   ]
-}
-''';
-
 String libraryName;
 String domainName;
 String modelName;
@@ -51,6 +15,8 @@ String modelName;
 Repo dartlingRepository;
 Domain dartlingDomain;
 Model dartlingModel;
+
+String modelJson;
 
 String firstLetterToUpper(String text) {
   return '${text[0].toUpperCase()}${text.substring(1)}';
@@ -84,9 +50,19 @@ addText(File file, String text) {
   writeSink.close();
 }
 
+File getFile(String path) {
+  return genFile(path);
+}
+
+String readTextFromFile(File file) {
+  String fileText = file.readAsStringSync();
+  return fileText;
+}
+
 genGitignore(File file) {
   var text = '''
 .buildlog
+pubspec.lock
 packages
 web/out
 *~
@@ -124,8 +100,7 @@ dependencies:
   addText(file, text);
 }
 
-genProject(String gen, String contextPath) {
-  var projectPath = '${contextPath}/${domainName}_${modelName}';
+genProject(String gen, String projectPath) {
   if (gen == '--genall') {
     genDir(projectPath);
     genDoc(projectPath);
@@ -145,13 +120,16 @@ genProject(String gen, String contextPath) {
   }
 }
 
-createDomainModel() {
-  if (dartlingModelJson.trim() == '') {
+createDomainModel(String projectPath) {
+  var modelJsonFilePath = '${projectPath}/model.json';
+  File modelJsonFile = getFile(modelJsonFilePath);
+  modelJson = readTextFromFile(modelJsonFile);
+  if (modelJson.length == 0) {
     print('missing json of the model');
   } else {
     dartlingRepository = new Repo();
     dartlingDomain = new Domain(firstLetterToUpper(domainName));
-    dartlingModel = fromMagicBoxes(dartlingModelJson,
+    dartlingModel = fromMagicBoxes(modelJson,
         dartlingDomain, firstLetterToUpper(modelName));
     dartlingRepository.domains.add(dartlingDomain);
   }
@@ -159,14 +137,19 @@ createDomainModel() {
 
 void main() {
   Options options = new Options();
-  // --genall C:/Users/ridjanod/git/dart demo projects
-  // --gengen C:/Users/ridjanod/git/dart demo projects
+
+  // --genall C:/Users/ridjanod/git/project domain model
+  // --gengen C:/Users/ridjanod/git/project domain model
+
+  // --genall /home/dr/git/project domain model
+  // --gengen /home/dr/git/project domain model
+
   List<String> args = options.arguments;
   if (args.length == 4 && (args[0] == '--genall' || args[0] == '--gengen')) {
     domainName = args[2];
     modelName = args[3];
     libraryName = '${domainName}_${modelName}';
-    createDomainModel();
+    createDomainModel(args[1]); // project path as argument
     genProject(args[0], args[1]);
   } else {
     print('arguments are not entered properly in Run/Manage Launches of Dart Editor');
