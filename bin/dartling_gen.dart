@@ -131,7 +131,7 @@ createDomainModel(String projectPath) {
   } else {
     dartlingRepository = new Repo();
     dartlingDomain = new Domain(firstLetterToUpper(domainName));
-    dartlingModel = fromMagicBoxes(modelJson,
+    dartlingModel = fromJsonToModel(modelJson,
         dartlingDomain, firstLetterToUpper(modelName));
     dartlingRepository.domains.add(dartlingDomain);
   }
