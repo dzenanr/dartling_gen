@@ -25,9 +25,7 @@ or
 --genall /home/dr/git/demo_projects demo projects
 
 By running the main function in the bin/dartling_gen.dart file,
-a project, with its domain and model names, will be 
-generated in the project directory. 
-Note that both domain and model names must be one word words in lower case.
+a project, with its domain and model, will be generated in the project directory. 
 
 If the model changes, update the json representation of the model. 
 Regenerate only the lib/gen directory, where the generated code must not be 
