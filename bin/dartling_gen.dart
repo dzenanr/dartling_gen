@@ -137,16 +137,12 @@ createDomainModel(String projectPath) {
   }
 }
 
-void main() {
-  Options options = new Options();
-
+void main(List<String> args) {
   // --genall C:/Users/ridjanod/git/project domain model
   // --gengen C:/Users/ridjanod/git/project domain model
 
   // --genall /home/dr/git/project domain model
   // --gengen /home/dr/git/project domain model
-
-  List<String> args = options.arguments;
   if (args.length == 4 && (args[0] == '--genall' || args[0] == '--gengen')) {
     domainName = args[2];
     modelName = args[3];
