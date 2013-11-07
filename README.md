@@ -1,11 +1,11 @@
-# ![Alt dartling] (https://raw.github.com/dzenanr/dartling/master/resources/dartling.png) **gen**
+# ![Alt dartling](https://raw.github.com/dzenanr/dartling/master/resources/dartling.png) **gen**
 
 **Categories**: dartling, model, code generation
 
 ## Description
 
-A [dartling] (https://github.com/dzenanr/dartling) project based on a model
-done in [Model Concepts] (https://github.com/dzenanr/magic_boxes) is generated.
+A [dartling](https://github.com/dzenanr/dartling) project based on a model
+done in [Model Concepts](https://github.com/dzenanr/magic_boxes) is generated.
 
 The json representation of a model designed in Model Concepts must be copied in
 the model.json file in the project directory.
