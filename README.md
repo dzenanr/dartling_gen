@@ -5,7 +5,7 @@
 ## Description
 
 A [dartling](https://github.com/dzenanr/dartling) project based on a model
-done in [Model Concepts](https://github.com/dzenanr/magic_boxes) is generated.
+done in [Model Concepts](https://github.com/dzenanr/model_concepts) is generated.
 
 The json representation of a model designed in Model Concepts must be copied in
 the model.json file in the project directory.
@@ -35,7 +35,7 @@ edited by a programmer:
 
 ### More Details
 
-[**dartling: Domain Model Framework**](https://docs.google.com/document/d/1xzjqxbJdYxn6Qpx_kIhCqCCjk5yabbXiOng8sixMjdc/edit?usp=sharing)
+[**dartling: Domain Model Framework**](http://goo.gl/Fd08zZ)
 
 [*Learning Dart*](http://www.packtpub.com/learning-dart/book) by Dzenan Ridjanovic & Ivo Balbaert
 
