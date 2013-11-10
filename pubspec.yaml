@@ -1,5 +1,5 @@
 name: dartling_gen
-version: 1.0.0
+version: 1.0.1
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
 description: Generate a new dartling project.
 homepage: https://github.com/dzenanr/dartling_gen

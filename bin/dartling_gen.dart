@@ -61,10 +61,11 @@ String readTextFromFile(File file) {
 
 genGitignore(File file) {
   var text = '''
+.DS_Store
 .buildlog
 pubspec.lock
 packages
-web/out
+out
 *~
 *.js
 *.js.deps
@@ -92,12 +93,12 @@ author: Your Name
 homepage: http://ondart.me/
 version: 0.0.1
 description: ${domainName}_${modelName} application that uses dartling for its model.
+environment:
+  sdk: '>=0.8.10+8 <2.0.0'
 dependencies:
-  browser: any
-  dartling:
-    git: git://github.com/dzenanr/dartling.git
-  dartling_default_app:
-    git: git://github.com/dzenanr/dartling_default_app.git
+  browser: '>=0.9.0 <0.10.0'
+  dartling: '>=1.0.1 <2.0.0'
+  dartling_default_app: '>=1.0.1 <2.0.0'
   ''';
   addText(file, text);
 }

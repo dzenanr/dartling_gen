@@ -4,7 +4,7 @@
 
 ## Description
 
-A [dartling](https://github.com/dzenanr/dartling) project based on a model
+A [dartling](http://pub.dartlang.org/packages/dartling) project based on a model
 done in [Model Concepts](https://github.com/dzenanr/model_concepts) is generated.
 
 The json representation of a model designed in Model Concepts must be copied in
@@ -38,5 +38,7 @@ edited by a programmer:
 [**dartling: Domain Model Framework**](http://goo.gl/Fd08zZ)
 
 [*Learning Dart*](http://www.packtpub.com/learning-dart/book) by Dzenan Ridjanovic & Ivo Balbaert
+
+[*Version History*](CHANGE_LOG.md)
 
 
