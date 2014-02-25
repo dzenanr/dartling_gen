@@ -25,7 +25,8 @@ or
 --genall /home/dr/dart/demo_projects demo projects
 
 By running the main function in the bin/dartling_gen.dart file,
-a project, with its domain and model, will be generated in the project directory.
+a project, with its demo domain and projects model, 
+will be generated in the project directory.
 
 If the model changes, update the json representation of the model.
 Regenerate only the lib/gen directory, where the generated code must not be
@@ -34,6 +35,17 @@ edited by a programmer:
 --gengen projectpath domain model
 
 ### Code Gen Example
+
+Create the dart/social_blogging folder (domain: social; model: blogging).
+
+Create the model.json file in the folder.
+
+Design the blogging model in 
+[Model Concepts](https://github.com/dzenanr/model_concepts) 
+and generate its JSON version.
+
+Copy the JSON representation from Model Concepts and 
+paste it into the model.json file.
 
 Open dartling_gen in Dart Editor.
 
@@ -50,7 +62,7 @@ Select the dartling_gen.dart command-line launch.
 
 In the Script arguments enter the following four arguments:
 
---genall C:\Users\ridjanod.FSA-RIDJANOD-2\dart\apps\social_blogging\spirals\social_blogging_00 social blogging
+--genall C:\dart\social_blogging social blogging
 
 Click on the Run button to generate the project.
 
