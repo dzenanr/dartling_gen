@@ -98,7 +98,7 @@ environment:
 dependencies:
   browser: '>=0.9.0 <0.10.0'
   dartling: '>=1.0.6 <2.0.0'
-  dartling_default_app: '>=1.0.1 <2.0.0'
+  dartling_default_app: '>=1.0.4 <2.0.0'
   ''';
   addText(file, text);
 }
