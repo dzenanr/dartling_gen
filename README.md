@@ -33,6 +33,28 @@ edited by a programmer:
 
 --gengen projectpath domain model
 
+### Code Gen Example
+
+Open dartling_gen in Dart Editor.
+
+Select bin/dartling_gen.dart.
+
+Right mouse button Run bin/dartling_gen.dart.
+
+dartling_gen.dart console message:
+
+arguments are not entered properly in Run/Manage Launches of Dart Editor
+
+In the menu Run open Manage Launches.
+
+Select dartling_gen.dart the command-line launch.
+
+In the Script arguments enter the following four arguments:
+
+--genall C:\Users\ridjanod.FSA-RIDJANOD-2\dart\apps\social_blogging\spirals\social_blogging_00 social blogging
+
+Click on the Run button to generate the project.
+
 ### More Details
 
 [**dartling: Domain Model Framework**](http://goo.gl/Fd08zZ)
