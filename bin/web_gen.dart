@@ -52,8 +52,8 @@ genDomainModelWebHtml(File file) {
         </a>
       </p>
       <p>
-        <img src="https://dl.dropbox.com/u/161496/dart/img/dartling_demo.png"/>
-        The model example, to be replaced by your model, is designed with
+        <img src="img/${domainName}_${modelName}.png"/>
+        The model is designed with
         <a  href="https://github.com/dzenanr/model_concepts" class="link">
           Model Concepts.
         </a>

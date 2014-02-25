@@ -4,6 +4,8 @@
 
 *1.0.2* 2014-02-25
 
++ update .gitignore
++ update gen html page with link to the model
 + update version in pubspec.yaml
 + update version in generated pubspec.yaml
 

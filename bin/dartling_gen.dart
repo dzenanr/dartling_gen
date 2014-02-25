@@ -62,10 +62,10 @@ String readTextFromFile(File file) {
 genGitignore(File file) {
   var text = '''
 .DS_Store
-.buildlog
-pubspec.lock
 packages
-out
+pubspec.lock
+build
+.buildlog
 *~
 *.js
 *.js.deps
