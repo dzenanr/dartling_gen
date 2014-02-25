@@ -39,15 +39,14 @@ Open dartling_gen in Dart Editor.
 
 Select bin/dartling_gen.dart.
 
-Right mouse button Run bin/dartling_gen.dart.
+Click on the right mouse button then Run bin/dartling_gen.dart.
 
 dartling_gen.dart console message:
-
 arguments are not entered properly in Run/Manage Launches of Dart Editor
 
-In the menu Run open Manage Launches.
+In the Run menu open Manage Launches.
 
-Select dartling_gen.dart the command-line launch.
+Select the dartling_gen.dart command-line launch.
 
 In the Script arguments enter the following four arguments:
 
