@@ -8,4 +8,4 @@ environment:
 documentation: http://goo.gl/Fd08zZ
 dependencies:
   browser: '>=0.9.0 <0.10.0'
-  dartling: '>=1.0.1 <2.0.0'
+  dartling: '>=1.0.5 <2.0.0'
