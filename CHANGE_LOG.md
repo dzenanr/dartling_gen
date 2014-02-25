@@ -2,6 +2,11 @@
 
 [based on](http://semver.org/)
 
+*1.0.2* 2014-02-25
+
++ update version in pubspec.yaml
++ update version in generated pubspec.yaml
+
 *1.0.1* 2013-11-10
 
 + update pubspec.yaml and .gitignore gen
