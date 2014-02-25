@@ -38,7 +38,7 @@ edited by a programmer:
 
 Create the dart/social_blogging folder (domain: social; model: blogging).
 
-Create the model.json file in the folder.
+Create the empty model.json file in the folder.
 
 Design the blogging model in 
 [Model Concepts](https://github.com/dzenanr/model_concepts) 
@@ -70,7 +70,7 @@ Click on the Run button to generate the project.
 
 [**dartling: Domain Model Framework**](http://goo.gl/Fd08zZ)
 
-[*Learning Dart*](http://www.packtpub.com/learning-dart/book) by Dzenan Ridjanovic & Ivo Balbaert
+[*Learning Dart*](http://www.packtpub.com/learning-dart/book)
 
 [*Version History*](CHANGE_LOG.md)
 
