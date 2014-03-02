@@ -147,6 +147,12 @@ void main(List<String> args) {
   if (args.length == 4 && (args[0] == '--genall' || args[0] == '--gengen')) {
     domainName = args[2];
     modelName = args[3];
+    if (domainName == 'domain') {
+      throw new DartlingError('domain cannot be the domain name');
+    }
+    if (modelName == 'model') {
+      throw new DartlingError('model cannot be the model name');
+    }
     libraryName = '${domainName}_${modelName}';
     createDomainModel(args[1]); // project path as argument
     genProject(args[0], args[1]);
