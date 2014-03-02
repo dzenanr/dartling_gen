@@ -147,6 +147,9 @@ void main(List<String> args) {
   if (args.length == 4 && (args[0] == '--genall' || args[0] == '--gengen')) {
     domainName = args[2];
     modelName = args[3];
+    if (domainName == modelName) {
+      throw new DartlingError('domain and model names must be different');
+    }
     if (domainName == 'domain') {
       throw new DartlingError('domain cannot be the domain name');
     }
