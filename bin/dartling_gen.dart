@@ -147,6 +147,8 @@ void main(List<String> args) {
   if (args.length == 4 && (args[0] == '--genall' || args[0] == '--gengen')) {
     domainName = args[2];
     modelName = args[3];
+    domainName =  domainName.toLowerCase();
+    modelName = modelName.toLowerCase();
     if (domainName == modelName) {
       throw new DartlingError('domain and model names must be different');
     }
