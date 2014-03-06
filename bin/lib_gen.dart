@@ -12,10 +12,6 @@ genDartlingRepository(File file) {
   addText(file, genRepository(dartlingDomain, libraryName));
 }
 
-genDartlingRepo(File file) {
-  addText(file, genRepo(dartlingDomain, libraryName));
-}
-
 genDartlingModels(File file) {
   addText(file, genModels(dartlingDomain, libraryName));
 }
@@ -78,17 +74,17 @@ ${modelJson}
 genAll(String path) {
   var libPath = '${path}/lib';
   genDir(libPath);
+  File repository = genFile('${libPath}/repository.dart');
+    genDartlingRepository(repository);
   File domainModelLibrary =
       genFile('${libPath}/${domainName}_${modelName}.dart');
   genDomainModelLibrary(domainModelLibrary);
   File domainModelAppLibrary =
       genFile('${libPath}/${domainName}_${modelName}_app.dart');
   genDomainModelAppLibrary(domainModelAppLibrary);
-
+    
   var domainPath = '${libPath}/${domainName}';
   genDir(domainPath);
-  File repo = genFile('${domainPath}/repo.dart');
-  genDartlingRepo(repo);
   File domain = genFile('${domainPath}/domain.dart');
   genDartlingDomain(domain);
 
@@ -118,8 +114,6 @@ genGen(String path) {
 
   var genDomainPath = '${genPath}/${domainName}';
   genDir(genDomainPath);
-  File repository = genFile('${genDomainPath}/repository.dart');
-  genDartlingRepository(repository);
   File models = genFile('${genDomainPath}/models.dart');
   genDartlingModels(models);
 
