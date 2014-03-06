@@ -8,44 +8,55 @@ genDomainModelAppLibrary(File file) {
   addText(file, genDartlingLibraryApp(dartlingModel));
 }
 
-genInitData(File file) {
-  addText(file, genInitDomainModel(dartlingModel, libraryName));
-}
-
-genConceptEntities(File file, Concept concept) {
-  addText(file, genConcept(concept, libraryName));
-}
-
 genDartlingRepository(File file) {
   addText(file, genRepository(dartlingDomain, libraryName));
+}
+
+genDartlingRepo(File file) {
+  addText(file, genRepo(dartlingDomain, libraryName));
 }
 
 genDartlingModels(File file) {
   addText(file, genModels(dartlingDomain, libraryName));
 }
 
+genDartlingDomain(File file) {
+  addText(file, genDomain(dartlingDomain, libraryName));
+}
+
 genDartlingEntries(File file) {
   addText(file, genEntries(dartlingModel, libraryName));
+}
+
+genDartlingModel(File file) {
+  addText(file, genModel(dartlingModel, libraryName));
 }
 
 genConceptEntitiesGen(File file, Concept concept) {
   addText(file, genConceptGen(concept, libraryName));
 }
 
+genConceptEntities(File file, Concept concept) {
+  addText(file, genConcept(concept, libraryName));
+}
+
 genJsonData(File file) {
-  var text = """
-part of ${domainName}_${modelName};
+  var sc = 'part of ${domainName}_${modelName}; \n';
+  sc = '${sc} \n';
+  sc = '${sc}// http://www.json.org/ \n';
+  sc = '${sc}// http://jsonformatter.curiousconcept.com/ \n';
+  sc = '${sc} \n';
+  sc = '${sc}// lib/${domainName}/${modelName}/json/data.dart \n';
 
-// http://www.json.org/
-// http://jsonformatter.curiousconcept.com/
-
-// lib/${domainName}/${modelName}/json/data.dart
-
-var ${domainName}${firstLetterToUpper(modelName)}DataJson = r'''
-
-''';
-  """;
-  addText(file, text);
+  for (Concept entryConcept in dartlingModel.entryConcepts) {
+    sc = '${sc}var ${domainName}${firstLetterToUpper(modelName)}'
+         '${entryConcept.code}Entry = r""" \n';
+    sc = '${sc} \n';
+    sc = '${sc}"""; \n';
+    sc = '${sc} \n';     
+  }
+  
+  addText(file, sc);
 }
 
 genJsonModel(File file) {
@@ -76,11 +87,15 @@ genAll(String path) {
 
   var domainPath = '${libPath}/${domainName}';
   genDir(domainPath);
+  File repo = genFile('${domainPath}/repo.dart');
+  genDartlingRepo(repo);
+  File domain = genFile('${domainPath}/domain.dart');
+  genDartlingDomain(domain);
 
   var modelPath = '${domainPath}/${modelName}';
   genDir(modelPath);
-  File initData = genFile('${modelPath}/init.dart');
-  genInitData(initData);
+  File model = genFile('${modelPath}/model.dart');
+  genDartlingModel(model);
   for (Concept concept in dartlingModel.concepts) {
     File conceptEntities =
         genFile('${modelPath}/${concept.codesLowerUnderscore}.dart');

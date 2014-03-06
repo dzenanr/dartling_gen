@@ -97,8 +97,8 @@ environment:
   sdk: '>=0.8.10+8 <2.0.0'
 dependencies:
   browser: '>=0.9.0 <0.10.0'
-  dartling: '>=1.0.6 <2.0.0'
-  dartling_default_app: '>=1.0.4 <2.0.0'
+  dartling: '>=2.0.0 <3.0.0'
+  dartling_default_app: '>=1.0.5 <2.0.0'
   ''';
   addText(file, text);
 }
@@ -132,18 +132,18 @@ createDomainModel(String projectPath) {
   } else {
     dartlingRepository = new Repo();
     dartlingDomain = new Domain(firstLetterToUpper(domainName));
-    dartlingModel = fromJsonToModel(modelJson,
-        dartlingDomain, firstLetterToUpper(modelName));
+    dartlingModel = fromJsonToModel(modelJson, dartlingDomain, 
+        firstLetterToUpper(modelName));
     dartlingRepository.domains.add(dartlingDomain);
   }
 }
 
 void main(List<String> args) {
-  // --genall C:/Users/ridjanod/git/project domain model
-  // --gengen C:/Users/ridjanod/git/project domain model
+  // --genall C:/Users/ridjanod/dart/project domain model
+  // --gengen C:/Users/ridjanod/dart/project domain model
 
-  // --genall /home/dr/git/project domain model
-  // --gengen /home/dr/git/project domain model
+  // --genall /home/dr/dart/project domain model
+  // --gengen /home/dr/dart/project domain model
   if (args.length == 4 && (args[0] == '--genall' || args[0] == '--gengen')) {
     domainName = args[2];
     modelName = args[3];
