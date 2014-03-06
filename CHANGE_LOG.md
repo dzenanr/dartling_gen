@@ -2,8 +2,9 @@
 
 [based on](http://semver.org/)
 
-*1.0.3* 2014-03-02
+*1.0.3* 2014-03-05
 
++ update code gen (specific repo, domain and model)
 + add dartling error if the domain and model names are the same
 + add dartling error if the domain name is domain
 + add dartling error if the model name is model
