@@ -108,7 +108,7 @@ genProject(String gen, String projectPath) {
     genDir(projectPath);
     genDoc(projectPath);
     genLib(gen, projectPath);
-    genTest(projectPath);
+    genTest(projectPath, dartlingModel);
     genWeb(projectPath);
     File gitignore = genFile('${projectPath}/.gitignore');
     genGitignore(gitignore);

@@ -4,11 +4,11 @@ genDomainModelGen(File file) {
   addText(file, genDartlingGen(dartlingModel));
 }
 
-genDomainModelTest(File file) {
-  addText(file, genDartlingTest(dartlingRepository, dartlingModel));
+genDomainModelTest(File file, Concept entryConcept) {
+  addText(file, genDartlingTest(dartlingRepository, dartlingModel, entryConcept));
 }
 
-genTest(String path) {
+genTest(String path, Model dartlingModel) {
   var testPath = '${path}/test';
   genDir(testPath);
 
@@ -20,8 +20,11 @@ genTest(String path) {
   File domainModelGen =
       genFile('${modelPath}/${domainName}_${modelName}_gen.dart');
   genDomainModelGen(domainModelGen);
-  File domainModelTest =
-      genFile('${modelPath}/${domainName}_${modelName}_test.dart');
-  genDomainModelTest(domainModelTest);
+  for (Concept entryConcept in dartlingModel.entryConcepts) {
+    File domainModelTest =
+        genFile('${modelPath}/${domainName}_${modelName}_'
+                '${entryConcept.codeLowerUnderscore}_test.dart');
+    genDomainModelTest(domainModelTest, entryConcept);  
+  }
 }
 

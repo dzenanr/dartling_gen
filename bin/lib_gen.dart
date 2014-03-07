@@ -9,7 +9,7 @@ genDomainModelAppLibrary(File file) {
 }
 
 genDartlingRepository(File file) {
-  addText(file, genRepository(dartlingDomain, libraryName));
+  addText(file, genRepository(dartlingRepository, libraryName));
 }
 
 genDartlingModels(File file) {
