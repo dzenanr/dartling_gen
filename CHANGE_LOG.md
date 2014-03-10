@@ -2,8 +2,10 @@
 
 [based on](http://semver.org/)
 
-*1.0.3* 2014-03-05
+*1.0.3* 2014-03-10
 
++ create var for the model's data json
++ create var for each entry's data json
 + update code gen (specific repo, domain and model)
 + add dartling error if the domain and model names are the same
 + add dartling error if the domain name is domain

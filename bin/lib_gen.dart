@@ -52,6 +52,11 @@ genJsonData(File file) {
     sc = '${sc} \n';     
   }
   
+  sc = '${sc}var ${domainName}${firstLetterToUpper(modelName)}Model = r""" \n';
+  sc = '${sc} \n';
+  sc = '${sc}"""; \n';
+  sc = '${sc} \n'; 
+
   addText(file, sc);
 }
 
