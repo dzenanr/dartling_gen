@@ -60,16 +60,18 @@ String readTextFromFile(File file) {
 }
 
 genGitignore(File file) {
+  /*
+.buildlog
+*.js
+*.js.deps
+*.js.map
+   */
   var text = '''
 .DS_Store
 packages
 pubspec.lock
 build
-.buildlog
 *~
-*.js
-*.js.deps
-*.js.map
   ''';
   addText(file, text);
 }

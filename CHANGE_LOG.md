@@ -2,8 +2,9 @@
 
 [based on](http://semver.org/)
 
-*1.0.3* 2014-03-10
+*2.0.0* 2014-03-14
 
++ gen doc/pubspec.txt file and doc/specific_changes folder
 + create var for the model's data json
 + create var for each entry's data json
 + update code gen (specific repo, domain and model)

@@ -1,5 +1,36 @@
 part of dartling_gen;
 
+genPubspecTxt(File file) {
+  var text = '''
+name: ${domainName}_${modelName}
+author: Your Name
+homepage: http://ondart.me/
+version: 0.0.1
+description: ${domainName}_${modelName} application that uses dartling for its model.
+environment:
+  sdk: '>=0.8.10+8 <2.0.0'
+dependencies:
+  browser: '>=0.9.0 <0.10.0'
+  dartling: '>=2.0.0 <3.0.0'
+  dartling_default_app: '>=1.0.5 <2.0.0'
+
+dependencies:
+  browser: '>=0.9.0 <0.10.0'
+  dartling:
+    git: 'https://github.com/dzenanr/dartling.git'
+  dartling_default_app:
+    git: 'https://github.com/dzenanr/dartling_default_app.git'
+
+dependencies:
+  browser: '>=0.9.0 <0.10.0'
+  dartling:
+    path: 'C:\\Users\\ridjanod.FSA-RIDJANOD-2\\dart\\model\\dartling'
+  dartling_default_app:
+    path: 'C:\\Users\\ridjanod.FSA-RIDJANOD-2\\dart\\model\\dartling_default_app'
+  ''';
+  addText(file, text);
+}
+
 genGithub(File file) {
   var text = '''
 github.txt for ${domainName}_${modelName}
@@ -119,6 +150,10 @@ git push --tags
 genDoc(String path) {
   var docPath = '${path}/doc';
   genDir(docPath);
+  File pubspec = genFile('${docPath}/pubspec.txt');
+  genPubspecTxt(pubspec);
+  var specificChangesPath = '${docPath}/specific_changes';
+  genDir(specificChangesPath);
   var gitPath = '${docPath}/git';
   genDir(gitPath);
   File github = genFile('${gitPath}/github.txt');

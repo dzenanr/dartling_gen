@@ -47,7 +47,7 @@ genDomainModelWebHtml(File file) {
     <section id="side">
       <p>
         <span class="drop">The</span> ${domainName}_${modelName} app in
-        <a  href="http://www.dartlang.org/" class="link">
+        <a  href="https://www.dartlang.org/" class="link">
           Dart.
         </a>
       </p>
