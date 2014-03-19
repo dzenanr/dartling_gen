@@ -1,9 +1,7 @@
 .DS_Store
+build
 packages
 pubspec.lock
-*.js
-*.js.deps
-*.js.map
 *~
 
   

@@ -4,6 +4,7 @@
 
 *2.0.0* 2014-03-14
 
++ update pubspec.yaml to dartling and dartling_default_app at GitHub
 + gen doc/pubspec.txt file and doc/specific_changes folder
 + create var for the model's data json
 + create var for each entry's data json
