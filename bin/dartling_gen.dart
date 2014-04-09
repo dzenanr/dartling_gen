@@ -82,6 +82,7 @@ genReadme(File file) {
   addText(file, text);
 }
 
+/*
 genPubspec(File file) {
   var text = '''
 name: ${domainName}_${modelName}
@@ -98,6 +99,25 @@ dependencies:
     git: 'https://github.com/dzenanr/dartling.git'
   dartling_default_app:
     git: 'https://github.com/dzenanr/dartling_default_app.git'
+  ''';
+  addText(file, text);
+}
+ */
+
+genPubspec(File file) {
+  var text = '''
+name: ${domainName}_${modelName}
+version: 0.0.1
+description: ${domainName}_${modelName} application that uses dartling for its model.
+author: Your Name
+homepage: http://ondart.me/
+documentation:
+dependencies:
+  browser: any
+  dartling:
+    git: https://github.com/dzenanr/dartling.git
+  dartling_default_app:
+    git: https://github.com/dzenanr/dartling_default_app.git
   ''';
   addText(file, text);
 }
