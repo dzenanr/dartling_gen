@@ -1,13 +1,10 @@
 name: dartling_gen
 version: 2.0.0
-author: Dzenan Ridjanovic <dzenanr@gmail.com>
 description: Generate a new dartling project.
+author: Dzenan Ridjanovic <dzenanr@gmail.com>
 homepage: https://github.com/dzenanr/dartling_gen
-environment:
-  sdk: '>=0.8.10+8 <2.0.0'
 documentation: http://goo.gl/Fd08zZ
 dependencies:
-  browser: '>=0.9.0 <0.10.0'
   dartling:
     git: 'https://github.com/dzenanr/dartling.git'
-    version: '>=2.0.0 <3.0.0'
+

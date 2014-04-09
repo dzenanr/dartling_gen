@@ -85,14 +85,15 @@ genReadme(File file) {
 genPubspec(File file) {
   var text = '''
 name: ${domainName}_${modelName}
-author: Your Name
-homepage: http://ondart.me/
 version: 0.0.1
 description: ${domainName}_${modelName} application that uses dartling for its model.
+author: Your Name
+homepage: http://ondart.me/
+documentation:
 environment:
-  sdk: '>=0.8.10+8 <2.0.0'
+  sdk: '>=1.2.0 <2.0.0'
 dependencies:
-  browser: '>=0.9.0 <0.10.0'
+  browser: '>=0.10.0 <0.11.0'
   dartling:
     git: 'https://github.com/dzenanr/dartling.git'
   dartling_default_app:
