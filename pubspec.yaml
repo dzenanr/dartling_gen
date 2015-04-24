@@ -5,6 +5,5 @@ author: Dzenan Ridjanovic <dzenanr@gmail.com>
 homepage: https://github.com/dzenanr/dartling_gen
 documentation: http://goo.gl/Fd08zZ
 dependencies:
-  dartling:
-    git: 'https://github.com/dzenanr/dartling.git'
+  dartling: any
 

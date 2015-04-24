@@ -14,6 +14,9 @@ dependencies:
     
 dependencies:
   dartling: '>=2.0.0 <3.0.0'
+  
+dependencies:
+  dartling: any
 
 dependencies:
   dartling:
