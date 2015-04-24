@@ -5,6 +5,7 @@
 *2.0.1* 2015-04-24
 
 + add .pub to .gitignore gen in bin/dartling_gen.dart
++ update pubspec gen in bin/dartling_gen.dart
 
 *2.0.0* 2014-03-19
 

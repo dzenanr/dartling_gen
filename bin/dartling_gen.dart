@@ -83,35 +83,15 @@ genReadme(File file) {
   addText(file, text);
 }
 
-/*
 genPubspec(File file) {
   var text = '''
 name: ${domainName}_${modelName}
 version: 0.0.1
-description: ${domainName}_${modelName} application that uses dartling for its model.
 author: Your Name
+description: ${domainName}_${modelName} application that uses dartling for its model.
 homepage: http://ondart.me/
-documentation:
 environment:
-  sdk: '>=1.2.0 <2.0.0'
-dependencies:
-  browser: '>=0.10.0 <0.11.0'
-  dartling:
-    git: 'https://github.com/dzenanr/dartling.git'
-  dartling_default_app:
-    git: 'https://github.com/dzenanr/dartling_default_app.git'
-  ''';
-  addText(file, text);
-}
- */
-
-genPubspec(File file) {
-  var text = '''
-name: ${domainName}_${modelName}
-version: 0.0.1
-description: ${domainName}_${modelName} application that uses dartling for its model.
-author: Your Name
-homepage: http://ondart.me/
+  sdk: '>=1.9.3 <2.0.0'
 documentation:
 dependencies:
   browser: any
