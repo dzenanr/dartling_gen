@@ -62,6 +62,7 @@ String readTextFromFile(File file) {
 genGitignore(File file) {
   var text = '''
 .DS_Store
+.pub
 build
 packages
 pubspec.lock
