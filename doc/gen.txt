@@ -15,6 +15,10 @@ model.json file.
 
 Open dartling_gen in Dart Editor.
 
+In the Run menu open Manage Launches.
+
+Remove existing launches.
+
 Select bin/dartling_gen.dart.
 
 Click on the right mouse button then Run bin/dartling_gen.dart.

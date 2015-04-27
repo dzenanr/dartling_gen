@@ -21,7 +21,11 @@ dependencies:
 dependencies:
   dartling:
     path: 'C:\Users\ridjanod.FSA-RIDJANOD-2\dart\model\dartling'
-    
+
+dependencies:
+  dartling:
+    path: /home/dzenanr/dart/model/dartling
+
 -----------------------------------------------------------------
     
 No need for a pub version of dartling_gen.

@@ -8,25 +8,32 @@ homepage: http://ondart.me/
 version: 0.0.1
 description: ${domainName}_${modelName} application that uses dartling for its model.
 environment:
-  sdk: '>=0.8.10+8 <2.0.0'
+  sdk: '>=1.9.3 <2.0.0'
 dependencies:
-  browser: '>=0.9.0 <0.10.0'
+  browser: '>=0.10.0 <0.11.0'
   dartling: '>=2.0.0 <3.0.0'
   dartling_default_app: '>=1.0.5 <2.0.0'
 
 dependencies:
-  browser: '>=0.9.0 <0.10.0'
+  browser: '>=0.10.0 <0.11.0'
   dartling:
     git: 'https://github.com/dzenanr/dartling.git'
   dartling_default_app:
     git: 'https://github.com/dzenanr/dartling_default_app.git'
 
 dependencies:
-  browser: '>=0.9.0 <0.10.0'
+  browser: '>=0.10.0 <0.11.0'
   dartling:
     path: 'C:\\Users\\ridjanod.FSA-RIDJANOD-2\\dart\\model\\dartling'
   dartling_default_app:
     path: 'C:\\Users\\ridjanod.FSA-RIDJANOD-2\\dart\\model\\dartling_default_app'
+
+dependencies:
+  browser: any
+  dartling:
+    path: /home/dzenanr/dart/model/dartling
+  dartling_default_app:
+    path: /home/dzenanr/dart/model/dartling_default_app
   ''';
   addText(file, text);
 }
