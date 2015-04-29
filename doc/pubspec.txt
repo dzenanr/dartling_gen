@@ -7,11 +7,16 @@ author: Dzenan Ridjanovic <dzenanr@gmail.com>
 homepage: https://github.com/dzenanr/dartling_gen
 documentation: http://goo.gl/Fd08zZ
 environment:
-  sdk: '>=1.2.0 <2.0.0'
+  sdk: '>=1.9.3 <2.0.0'
 dependencies:
   dartling:
     git: 'https://github.com/dzenanr/dartling.git'
-    
+  
+?
+  dartling:
+    git: 'https://github.com/dzenanr/dartling.git'
+? 
+  
 dependencies:
   dartling: '>=2.0.0 <3.0.0'
   

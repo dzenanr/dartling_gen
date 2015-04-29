@@ -4,7 +4,8 @@ description: Generate a new dartling project.
 author: Dzenan Ridjanovic <dzenanr@gmail.com>
 homepage: https://github.com/dzenanr/dartling_gen
 documentation: http://goo.gl/Fd08zZ
+environment:
+  sdk: '>=1.9.3 <2.0.0'
 dependencies:
-  dartling:
-    git: git://github.com/dzenanr/dartling.git
+  dartling: any
 

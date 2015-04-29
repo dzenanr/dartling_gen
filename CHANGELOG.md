@@ -1,6 +1,6 @@
 ## Version history of [dartling_gen](https://github.com/dzenanr/dartling_gen)
 
-[based on](http://semver.org/)
+based on [Semantic Versioning](http://semver.org/)
 
 *2.0.1* 2015-04-24
 
