@@ -1,42 +1,42 @@
 part of dartling_gen;
 
-genDomainModelLibrary(File file) {
+void genDomainModelLibrary(File file) {
   addText(file, genDartlingLibrary(dartlingModel));
 }
 
-genDomainModelAppLibrary(File file) {
+void genDomainModelAppLibrary(File file) {
   addText(file, genDartlingLibraryApp(dartlingModel));
 }
 
-genDartlingRepository(File file) {
+void genDartlingRepository(File file) {
   addText(file, genRepository(dartlingRepository, libraryName));
 }
 
-genDartlingModels(File file) {
+void genDartlingModels(File file) {
   addText(file, genModels(dartlingDomain, libraryName));
 }
 
-genDartlingDomain(File file) {
+void genDartlingDomain(File file) {
   addText(file, genDomain(dartlingDomain, libraryName));
 }
 
-genDartlingEntries(File file) {
+void genDartlingEntries(File file) {
   addText(file, genEntries(dartlingModel, libraryName));
 }
 
-genDartlingModel(File file) {
+void genDartlingModel(File file) {
   addText(file, genModel(dartlingModel, libraryName));
 }
 
-genConceptEntitiesGen(File file, Concept concept) {
+void genConceptEntitiesGen(File file, Concept concept) {
   addText(file, genConceptGen(concept, libraryName));
 }
 
-genConceptEntities(File file, Concept concept) {
+void genConceptEntities(File file, Concept concept) {
   addText(file, genConcept(concept, libraryName));
 }
 
-genJsonData(File file) {
+void genJsonData(File file) {
   var sc = 'part of ${domainName}_${modelName}; \n';
   sc = '${sc} \n';
   sc = '${sc}// http://www.json.org/ \n';
@@ -60,7 +60,7 @@ genJsonData(File file) {
   addText(file, sc);
 }
 
-genJsonModel(File file) {
+void genJsonModel(File file) {
   var text = """
 part of ${domainName}_${modelName};
 
@@ -76,7 +76,7 @@ ${modelJson}
   addText(file, text);
 }
 
-genAll(String path) {
+void genAll(String path) {
   var libPath = '${path}/lib';
   genDir(libPath);
   File repository = genFile('${libPath}/repository.dart');
@@ -113,7 +113,7 @@ genAll(String path) {
   genGen(path);
 }
 
-genGen(String path) {
+void genGen(String path) {
   var genPath = '${path}/lib/gen';
   genDir(genPath);
 
@@ -133,7 +133,7 @@ genGen(String path) {
   }
 }
 
-genLib(String gen, String path) {
+void genLib(String gen, String path) {
   if (gen == '--genall') {
     genAll(path);
   } else {

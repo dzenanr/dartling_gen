@@ -1,14 +1,14 @@
 part of dartling_gen;
 
-genDomainModelGen(File file) {
+void genDomainModelGen(File file) {
   addText(file, genDartlingGen(dartlingModel));
 }
 
-genDomainModelTest(File file, Concept entryConcept) {
+void genDomainModelTest(File file, Concept entryConcept) {
   addText(file, genDartlingTest(dartlingRepository, dartlingModel, entryConcept));
 }
 
-genTest(String path, Model dartlingModel) {
+void genTest(String path, Model dartlingModel) {
   var testPath = '${path}/test';
   genDir(testPath);
 

@@ -2,6 +2,10 @@
 
 based on [Semantic Versioning](http://semver.org/)
 
+*2.0.2* 2015-04-30
+
++ add void where missing
+
 *2.0.1* 2015-04-24
 
 + add .pub to .gitignore gen in bin/dartling_gen.dart

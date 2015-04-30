@@ -44,7 +44,7 @@ File genFile(String path) {
   return file;
 }
 
-addText(File file, String text) {
+void addText(File file, String text) {
   IOSink writeSink = file.openWrite();
   writeSink.write(text);
   writeSink.close();
@@ -59,7 +59,7 @@ String readTextFromFile(File file) {
   return fileText;
 }
 
-genGitignore(File file) {
+void genGitignore(File file) {
   var text = '''
 .DS_Store
 .pub
@@ -71,7 +71,7 @@ pubspec.lock
   addText(file, text);
 }
 
-genReadme(File file) {
+void genReadme(File file) {
   var text = '';
   text = '${text}# ${domainName}_${modelName} \n';
   text = '${text}\n';
@@ -84,7 +84,7 @@ genReadme(File file) {
 }
 
 /*
-genPubspec(File file) {
+void genPubspec(File file) {
   var text = '''
 name: ${domainName}_${modelName}
 version: 0.0.1
@@ -92,7 +92,7 @@ author: Your Name
 description: ${domainName}_${modelName} application that uses dartling for its model.
 homepage: http://ondart.me/
 environment:
-  sdk: '>=1.9.3 <2.0.0'
+  sdk: ^1.10.0
 documentation:
 dependencies:
   browser: any
@@ -105,7 +105,7 @@ dependencies:
 }
  */
 
-genPubspec(File file) {
+void genPubspec(File file) {
   var text = '''
 name: ${domainName}_${modelName}
 version: 0.0.1
@@ -113,7 +113,7 @@ author: Your Name
 description: ${domainName}_${modelName} application that uses dartling for its model.
 homepage: http://ondart.me/
 environment:
-  sdk: '>=1.9.3 <2.0.0'
+  sdk: ^1.10.0
 documentation:
 dependencies:
   browser: any
@@ -123,7 +123,7 @@ dependencies:
   addText(file, text);
 }
 
-genProject(String gen, String projectPath) {
+void genProject(String gen, String projectPath) {
   if (gen == '--genall') {
     genDir(projectPath);
     genDoc(projectPath);
@@ -143,7 +143,7 @@ genProject(String gen, String projectPath) {
   }
 }
 
-createDomainModel(String projectPath) {
+void createDomainModel(String projectPath) {
   var modelJsonFilePath = '${projectPath}/model.json';
   File modelJsonFile = getFile(modelJsonFilePath);
   modelJson = readTextFromFile(modelJsonFile);

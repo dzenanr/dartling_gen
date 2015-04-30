@@ -1,10 +1,10 @@
 part of dartling_gen;
 
-genDomainModelWeb(File file) {
+void genDomainModelWeb(File file) {
   addText(file, genDartlingWeb(dartlingModel));
 }
 
-genDomainModelWebHtml(File file) {
+void genDomainModelWebHtml(File file) {
   var text = '''
 <!DOCTYPE html>
 
@@ -80,7 +80,7 @@ genDomainModelWebHtml(File file) {
   addText(file, text);
 }
 
-genLayout(File file) {
+void genLayout(File file) {
   var text = '''
 /* layout.css */
 
@@ -117,7 +117,7 @@ genLayout(File file) {
   addText(file, text);
 }
 
-genLayout2(File file) {
+void genLayout2(File file) {
   var text = '''
 /* layout2c.css */
 
@@ -149,7 +149,7 @@ genLayout2(File file) {
   addText(file, text);
 }
 
-genLink(File file) {
+void genLink(File file) {
   var text = '''
 /* link.css */
 
@@ -198,7 +198,7 @@ genLink(File file) {
   addText(file, text);
 }
 
-genList(File file) {
+void genList(File file) {
   var text = '''
 /* list.css */
 
@@ -243,7 +243,7 @@ genList(File file) {
   addText(file, text);
 }
 
-genMenu(File file) {
+void genMenu(File file) {
   var text = '''
 /* menu.css */
 
@@ -345,7 +345,7 @@ genMenu(File file) {
   addText(file, text);
 }
 
-genPage(File file) {
+void genPage(File file) {
   var text = '''
 /* page.css */
 
@@ -395,7 +395,7 @@ genPage(File file) {
   addText(file, text);
 }
 
-genTable(File file) {
+void genTable(File file) {
   var text = '''
 /* table.css */
 
@@ -449,7 +449,7 @@ genTable(File file) {
   addText(file, text);
 }
 
-genWeb(String path) {
+void genWeb(String path) {
   var webPath = '${path}/web';
   genDir(webPath);
 

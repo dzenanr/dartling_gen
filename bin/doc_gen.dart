@@ -1,6 +1,6 @@
 part of dartling_gen;
 
-genPubspecTxt(File file) {
+void genPubspecTxt(File file) {
   var text = '''
 name: ${domainName}_${modelName}
 author: Your Name
@@ -8,11 +8,11 @@ homepage: http://ondart.me/
 version: 0.0.1
 description: ${domainName}_${modelName} application that uses dartling for its model.
 environment:
-  sdk: '>=1.9.3 <2.0.0'
+  sdk: '>=1.10.0 <2.0.0'
 dependencies:
   browser: '>=0.10.0 <0.11.0'
   dartling: '>=2.0.0 <3.0.0'
-  dartling_default_app: '>=1.0.5 <2.0.0'
+  dartling_default_app: '>=2.0.0 <3.0.0'
 
 dependencies:
   browser: '>=0.10.0 <0.11.0'
@@ -38,7 +38,7 @@ dependencies:
   addText(file, text);
 }
 
-genGithub(File file) {
+void genGithub(File file) {
   var text = '''
 github.txt for ${domainName}_${modelName}
 
@@ -154,7 +154,7 @@ git push --tags
   addText(file, text);
 }
 
-genDoc(String path) {
+void genDoc(String path) {
   var docPath = '${path}/doc';
   genDir(docPath);
   File pubspec = genFile('${docPath}/pubspec.txt');
