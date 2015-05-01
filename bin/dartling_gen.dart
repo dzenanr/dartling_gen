@@ -103,7 +103,7 @@ dependencies:
   ''';
   addText(file, text);
 }
- */
+*/
 
 void genPubspec(File file) {
   var text = '''
@@ -122,6 +122,7 @@ dependencies:
   ''';
   addText(file, text);
 }
+
 
 void genProject(String gen, String projectPath) {
   if (gen == '--genall') {
